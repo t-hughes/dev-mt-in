@@ -8,17 +8,27 @@ body {
   margin: 0 auto;
 }
 
-.header {
+header {
   width: 100%;
-  margin-bottom: 50px;
   padding: 0 60px;
+  font-family: "Lora", serif;
+}
+
+.branding {
+  color: #383737;
+  text-decoration: none;
+}
+
+
+.nav-header {
+  margin-bottom: 50px;
   border-bottom: solid 1px #EEEDED;
   display: flex;
   justify-content: space-between;
 }
 
 .main-wrapper {
-  padding: 0 60px;
+
 }
 
 .main-container {
@@ -112,26 +122,45 @@ footer {
   width: 100%;
   margin-top: 150px;
   padding: 0 60px;
+  font-family: "Lora", serif;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+footer .footer-link {
+  text-decoration: none;
+  color: #ABABAB;
 }
-footer ul {
+
+.footer-link:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.footer-link:hover:after {
+  width: 100%;
+  background: #00FFE9;
+}
+
+.footer-link.active:after {
+  width: 100%;
+  background: #00FFE9;
+}
+
+/*This is a thinner line if wanted*/
+/*a.active:after {
+  width: 100%;
+  border-bottom: 1px solid #00FFE9;
+}*/
+
+.nav-footer {
+  padding: 0;
   border-top: solid 2px #DEDEDE;
   display: flex;
   justify-content: space-between;
-  color: #ABABAB;
   font-size: 14px;
-}
-
-footer ul li {
-  flex-wrap: wrap;
-  align-items: center;
   padding: 15px;
-}
-
-  li:active {
-  border-bottom: solid 1px #00FFE9;
 }

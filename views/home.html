@@ -1,8 +1,13 @@
+<h3>Home</h3>
 <!-- Header -->
-<header class="header">
-    <img src="/images/Icons/Search.svg">
-    <h1>DevMountain</h1>
-    <img src="/images/Icons/Ham.svg">
+<header>
+    <nav class="nav-header">
+        <a ui-sref="friend-search"><img src="/images/Icons/Search.svg"></a>
+        <a ui-sref="landing" class="branding">
+            <h1 class="branding">DevMountain</h1>
+        </a>
+        <img src="/images/Icons/Ham.svg">
+    </nav>
 </header>
 
 <main class="main-wrapper">
@@ -27,6 +32,7 @@
                 </form>
             </div>
         </section>
+
         <!-- Right Side of Initial View Page - Image -->
         <div class="right-side">
             <div class="triangle-background"></div>
@@ -34,12 +40,3 @@
         </div>
     </div>
 </main>
-
-<!-- Footer -->
-<footer>
-    <ul>
-        <li>View Friends</li>
-        <li>Find Friends</li>
-        <li>Update Profile</li>
-    </ul>
-</footer>

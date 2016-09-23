@@ -1,3 +1,3 @@
-angular.module('socialApp').service('mainSrvc', function(){
+angular.module('socialInternApp').service('mainSrvc', function(){
 
 });
