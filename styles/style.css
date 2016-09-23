@@ -14,7 +14,7 @@ header {
   font-family: "Lora", serif;
 }
 
-.branding {
+.devmt-branding {
   color: #383737;
   text-decoration: none;
 }
@@ -27,14 +27,9 @@ header {
   justify-content: space-between;
 }
 
-.main-wrapper {
-
-}
-
 .main-container {
   display: flex;
   justify-content: space-around;
-  flex-wrap: nowrap;
 }
 
 .devblue {
@@ -93,19 +88,28 @@ header {
   padding-left: 40px;
 }
 
-.right-side .triangle-background {
-  position: absolute;
-  top: 40px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 150px 259.8px 150px;
-  border-color: transparent transparent #DEDEDE transparent;
+.triangle-background {
+  width: 375px;
+  padding-bottom: 265.16px;
+  position: relative;
+  overflow: hidden;
+  transform-origin: 0 100%;
   transform: rotate(7deg);
-  background-image: url("");
 }
 
-.right-side .triangle-foreground {
+.triangle-background:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(229, 227, 228, 0.85), rgba(229, 227, 228, 0.85)), url("");
+  background-size: cover;
+  background-position: center top;
+  transform-origin: 0 100%;
+  transform: rotate(60deg) skewX(30deg);
+}
+
+.triangle-foreground {
   position: absolute;
   top: 100px;
   left: 75px;
@@ -114,7 +118,7 @@ header {
   border-style: solid;
   border-width: 0 150px 259.8px 150px;
   border-color: transparent transparent #85FDF3 transparent;
-  transform: rotate(45deg);
+  transform: rotate(50deg);
   filter: drop-shadow(1px 1px 2px #BBB);
 }
 
