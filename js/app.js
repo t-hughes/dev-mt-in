@@ -1,6 +1,6 @@
 angular.module('socialInternApp', ['ui.router'])
 .config( function($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
   $stateProvider
     .state('home', {
         url: '/home',

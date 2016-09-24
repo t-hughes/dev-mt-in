@@ -14,6 +14,8 @@ h3{
   font-size: 20px;
 }
 
+
+/*/////Styles for Header and Footer/////*/
 header {
   width: 100%;
   padding: 0 30px;
@@ -37,6 +39,56 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+footer {
+  width: 100%;
+  margin-top: 150px;
+  padding: 0 60px;
+  font-family: "Lora", serif;
+}
+
+footer .footer-link {
+  text-decoration: none;
+  color: #ABABAB;
+}
+
+.footer-link:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.footer-link:hover:after {
+  width: 100%;
+  background: #00FFE9;
+}
+
+.footer-link.active:after {
+  width: 100%;
+  background: #00FFE9;
+}
+
+/*This is a thinner line if wanted*/
+/*a.active:after {
+  width: 100%;
+  border-bottom: 1px solid #00FFE9;
+}*/
+
+.nav-footer {
+  padding: 0;
+  border-top: solid 2px #DEDEDE;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 15px;
+}
+
+
+/*/////Styles for Home Page/////*/
 
 .main-container {
   display: flex;
@@ -96,6 +148,7 @@ header {
   border: none;
 }
 
+/*/////Triangle on the Home Page/////*/
 .right-side {
   position: relative;
   width: 335px;
@@ -136,73 +189,26 @@ header {
   filter: drop-shadow(1px 1px 2px #BBB);
 }
 
-footer {
-  width: 100%;
-  margin-top: 150px;
-  padding: 0 60px;
-  font-family: "Lora", serif;
-}
-
-footer .footer-link {
-  text-decoration: none;
-  color: #ABABAB;
-}
-
-.footer-link:after {
-  content: '';
-  display: block;
-  margin: auto;
-  height: 3px;
-  width: 0px;
-  background: transparent;
-  transition: width .5s ease, background-color .5s ease;
-}
-
-.footer-link:hover:after {
-  width: 100%;
-  background: #00FFE9;
-}
-
-.footer-link.active:after {
-  width: 100%;
-  background: #00FFE9;
-}
-
-/*This is a thinner line if wanted*/
-/*a.active:after {
-  width: 100%;
-  border-bottom: 1px solid #00FFE9;
-}*/
-
-.nav-footer {
-  padding: 0;
-  border-top: solid 2px #DEDEDE;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  padding: 15px;
-}
 
 
+/*////Styles for Update Profile Page////*/
 
-/*Styles for Update Profile Page*/
-
-.update-wrapper {
+.ipsum-wrapper {
   display: flex;
     justify-content: space-between;
     width: 665px;
     margin: 0 auto;
 }
 
-.update-ipsum {
-  line-height: 1.4;
-  font-size: 13px;
-}
-
-.left-side-ipsum {
+.ipsum-container {
   width: 50%;
   text-align: justify;
   font-family: "Lora", serif;
+}
+
+.ipsum-text {
+  line-height: 1.4;
+  font-size: 13px;
 }
 
 .right-side-updateForm {
@@ -241,3 +247,17 @@ footer .footer-link {
   border-radius: 2px;
   border: none;
 }
+
+
+/*////Styles for Friend Profile Page////*/
+
+
+
+
+
+/*/////Styles for Friends Page////*/
+
+
+
+
+/*/////Styles for Friends Search Page/////*/
