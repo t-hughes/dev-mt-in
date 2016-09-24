@@ -13,17 +13,30 @@
 
     <body ng-controller="mainCtrl">
 
-        <!-- Angular ui router -->
+        <!-- Angular UI Router -->
         <ui-view></ui-view>
 
-        <!-- Footer -->
-        <footer>
+        <!-- Header
+
+        <header>
+            <nav class="nav-header">
+                <a ui-sref="friend-search"><img src="/images/Icons/Search.svg" class="search-icon"></a>
+                <a ui-sref="landing" class="devmt-branding">
+                    <h1 class="devmt-branding">DevMountain</h1>
+                </a>
+                <img src="/images/Icons/Ham.svg">
+            </nav>
+        </header> -->
+
+
+        <!-- Universal Footer -->
+        <!-- <footer>
             <nav class="nav-footer">
                 <a ui-sref-active="active" ui-sref="friends" class="footer-link">View Friends</a>
                 <a ui-sref-active="active" ui-sref="friend-search" class="footer-link">Find Friends</a>
                 <a ui-sref-active="active" ui-sref="update" class="footer-link">Update Profile</a>
             </nav>
-        </footer>
+        </footer> -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
