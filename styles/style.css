@@ -93,7 +93,7 @@ footer .footer-link {
 .main-container {
   display: flex;
   justify-content: space-between;
-  width: 665px;
+  width: 800px;
   margin: 0 auto;
 }
 
@@ -190,63 +190,83 @@ footer .footer-link {
 }
 
 
-
-/*////Styles for Update Profile Page////*/
-
-.ipsum-wrapper {
-  display: flex;
-    justify-content: space-between;
-    width: 665px;
-    margin: 0 auto;
+.profile-wrapper {
+  width: 35%;
+ text-align: justify;
+ padding-top: 33px;
 }
 
-.ipsum-container {
-  width: 50%;
-  text-align: justify;
+.profile-firstname {
   font-family: "Lora", serif;
+   font-size: 38.4px;
+   color: #272727;
+   letter-spacing: 2px;
+   margin: 0;
 }
 
-.ipsum-text {
+.profile-lastname {
+  font-family: "Lora", serif;
+  font-size: 38.4px;
+  color: #272727;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-left: 70px;
+}
+
+.profile-tag {
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #272727;
+}
+
+.text-bio {
   line-height: 1.4;
   font-size: 13px;
 }
+/*////Styles for Update Profile Page////*/
 
-.right-side-updateForm {
-  width: 50%;
-  padding-left: 40px;
+
+
+
+.profile-update {
+  width: 43%;
   font-family: "Lora", serif;
 }
 
-.update-form input {
+.form-inputs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.form-inputs input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
   width: 100%;
-  padding-left: 5px;
   outline: none;
-  margin-bottom: 5px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 3px;
-  font-size: 16px;
 }
 
-.update-form textarea {
+.form-inputs textarea {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 5px;
   width: 100%;
-  height: 200px;
-  resize: none;
+  height: 160px;
   outline: none;
-  border: 1px solid #DEDEDE;
-  overflow: auto;
-  font-size: 16px;
+  border: 1px solid #dedede;
+  resize: none;
+  border-radius: 3px;
 }
 
-.update-form button {
-  width: 98%;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 16px;
-  color: #A9A9A9;
-  background-color: #85FDF3;
-  border-radius: 2px;
-  border: none;
+.title-header button {
+
 }
+
 
 
 /*////Styles for Friend Profile Page////*/
@@ -257,7 +277,79 @@ footer .footer-link {
 
 /*/////Styles for Friends Page////*/
 
+.friend-profiles {
+   font-family: "Lora", serif;
+    width: 52%;
+    padding-top: 15px;
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #dedede;
+  box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+  outline: none;
+  height: 35px;
+}
+
+.sort{
+  border: 1px solid #272727;
+  padding: 1px 10px;
+  font-size: 8px;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    border-radius: 0;
+}
+
+.sort:focus {
+  outline: none;
+}
+
+.friends-list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.friend-profilePic {
+    margin-bottom: 15px;
+    width: 200px;
+    height: 150px;
+}
 
 
 
 /*/////Styles for Friends Search Page/////*/
+
+.color-white {
+  background-color: #FFFFFF;
+}
+
+.search-friends {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #272727;
+}
+
+.search-friends::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #272727;
+}
+.search-friends::-moz-placeholder { /* Firefox 19+ */
+  color: #272727;
+}
+.search-friends:-ms-input-placeholder { /* IE 10+ */
+  color: #272727;
+}
+.search-friends:-moz-placeholder { /* Firefox 18- */
+  color: #272727;
+}
