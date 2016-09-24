@@ -3,7 +3,7 @@ angular.module('socialInternApp', ['ui.router'])
   $urlRouterProvider.otherwise('/');
   $stateProvider
     .state('home', {
-        url: '/',
+        url: '/home',
         templateUrl: '/views/templates/home.html'
     })
 
