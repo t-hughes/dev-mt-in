@@ -116,7 +116,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(229, 227, 228, 0.85), rgba(229, 227, 228, 0.85)), url("");
+  background-image: linear-gradient(rgba(229, 227, 228, 0.85), rgba(229, 227, 228, 0.85)), url("/images/apartments.jpeg");
   background-size: cover;
   background-position: center top;
   transform-origin: 0 100%;
