@@ -1,15 +1,5 @@
 <!-- <h3>HOME</h3> -->
 
-<!-- Header -->
-<!-- <header>
-    <nav class="nav-header">
-        <a ui-sref="friend-search"><img src="/images/Icons/Search.svg" class="search-icon"></a>
-        <a ui-sref="landing" class="devmt-branding">
-            <h1 class="devmt-branding">DevMountain</h1>
-        </a>
-        <img src="/images/Icons/Ham.svg">
-    </nav>
-</header> -->
 
 <!-- Body -->
 <main class="main-container">
@@ -24,38 +14,31 @@
         <div>
             <form class="form-home">
                 <input type="text"
+                ng-model="$root.name"
                 placeholder="Full Name"
                 onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Full Name'"
-                ng-model="userFullName">
+                onblur="this.placeholder = 'Full Name'">
 
                 <input type="text"
+                ng-model="$root.tagline"
                 placeholder="Tagline"
                 onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Tagline'"
-                ng-model="userTagline">
+                onblur="this.placeholder = 'Tagline'">
 
                 <input type="text"
+                ng-model="$root.imgUrl"
                 placeholder="Profile Image Url"
                 onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Profile Image Url'"
-                ng-model="userProfileImageUrl">
+                onblur="this.placeholder = 'Profile Image Url'">
 
                 <textarea rows="15" cols="50"
+                ng-model="$root.bio"
                 placeholder="Bio"
                 onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Bio'"
-                ng-model="userBio"></textarea>
+                onblur="this.placeholder = 'Bio'">
+                </textarea>
 
-                <button ng-click="InitialUserSave(
-                {
-                  'name': userFullName,
-                  'tagline': userTagline,
-                  'profileUrl': userProfileImageUrl,
-                  'bio': userBio
-                }
-                  $event
-                )">
+                <button ng-click="save()" ng-disabled="!name || !tagline || !imgUrl || !bio">
                     Save Changes
                 </button>
             </form>

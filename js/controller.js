@@ -1,11 +1,13 @@
-angular.module('socialInternApp').controller('mainCtrl', function($scope, mainSrvc, localstorageService){
+angular.module('socialInternApp').controller('mainCtrl', function($scope, $state, mainSrvc){
 
-  $scope.InitialUserSave = function(profileObj, $event) {
-    $event.preventDefault();
-    $scope.userProfile = profileObj;
-    localstorageService.storeUserProfile(profileObj);
-    $scope.goToLandingPage();
-    $scope.isUserProfileLogged = true;
-  };
+      $scope.save = function() {
+          alert('saved!');
+          $state.go('landing');
+      };
 
+
+      // $scope.save = function() {
+      //     alert('saved!');
+      //     $state.go('landing');
+      // };
 });

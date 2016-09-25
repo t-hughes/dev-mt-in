@@ -1,35 +1,48 @@
 angular.module('socialInternApp', ['ui.router'])
-.config(function($urlRouterProvider, $stateProvider) {
-  $urlRouterProvider.otherwise('/');
-  $stateProvider
-    .state('home', {
-        url: '/home',
-        templateUrl: '/views/templates/home.html'
-    })
+    .config(function($urlRouterProvider, $stateProvider) {
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
 
-    .state('landing', {
-        url: '/landing',
-        templateUrl: '/views/templates/landing.html'
-    })
+        .state('home', {
+            url: '/',
+            templateUrl: 'views/templates/home.html',
+            // controller: function($scope, $state) {
+            //     $scope.save = function() {
+            //         alert('saved!');
+            //         $state.go('landing');
+            //     };
+            // }
+        })
 
-    .state('friends', {
-        url: '/friends',
-        templateUrl: '/views/templates/friends.html'
-    })
+        .state('landing', {
+            url: '/landing',
+            templateUrl: '/views/templates/landing.html'
+        })
 
-    .state('friend-search', {
-        url: '/friend-search',
-        templateUrl: '/views/templates/friend-search.html'
-    })
+        .state('friends', {
+            url: '/friends',
+            templateUrl: '/views/templates/friends.html'
+        })
 
-    .state('friend-profile', {
-        url: '/friend-profile',
-        templateUrl: '/views/templates/friend-profile.html'
-    })
+        .state('friend-search', {
+            url: '/friend-search',
+            templateUrl: '/views/templates/friend-search.html'
+        })
 
-    .state('update', {
-        url: '/update',
-        templateUrl: '/views/templates/update.html'
+        .state('friend-profile', {
+            url: '/friend-profile',
+            templateUrl: '/views/templates/friend-profile.html'
+        })
+
+        .state('update', {
+            url: '/update',
+            templateUrl: 'views/templates/update.html',
+            // controller: function($scope, $state) {
+            //     $scope.save = function() {
+            //         alert('saved!');
+            //         $state.go('landing');
+            //     };
+            // }
+        });
+
     });
-
-});
