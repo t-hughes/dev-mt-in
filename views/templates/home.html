@@ -1,4 +1,4 @@
-<h3>HOME</h3>
+<!-- <h3>HOME</h3> -->
 
 <!-- Header -->
 <!-- <header>
@@ -11,32 +11,60 @@
     </nav>
 </header> -->
 
-    <!-- Body -->
-    <main class="main-container">
-        <!-- Left Side of Initial View Page - Input Form -->
-        <section class="left-side">
-            <div>
-                <p>Welcome to
-                    <span class="devblue">DevMountain</span>
-                    Social<br>
-                    Add Some Info So Friends Can Find You</p>
-            </div>
-            <div>
-                <form class="form-home">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Tagline">
-                    <input type="text" placeholder="Profile Image Url">
-                    <textarea rows="15" cols="50" placeholder="Bio"></textarea>
-                    <button>
-                        Save Changes
-                    </button>
-                </form>
-            </div>
-        </section>
+<!-- Body -->
+<main class="main-container">
+    <!-- Left Side of Initial View Page - Input Form -->
+    <section class="left-side">
+        <div>
+            <p>Welcome to
+                <span class="devblue">DevMountain</span>
+                Social<br>
+                Add Some Info So Friends Can Find You</p>
+        </div>
+        <div>
+            <form class="form-home">
+                <input type="text"
+                placeholder="Full Name"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Full Name'"
+                ng-model="userFullName">
 
-        <!-- Right Side of Initial View Page - Image -->
-        <section class="right-side">
-            <div class="triangle-background"></div>
-            <div class="triangle-foreground"></div>
-        </section>
-    </main>
+                <input type="text"
+                placeholder="Tagline"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Tagline'"
+                ng-model="userTagline">
+
+                <input type="text"
+                placeholder="Profile Image Url"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Profile Image Url'"
+                ng-model="userProfileImageUrl">
+
+                <textarea rows="15" cols="50"
+                placeholder="Bio"
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Bio'"
+                ng-model="userBio"></textarea>
+
+                <button ng-click="InitialUserSave(
+                {
+                  'name': userFullName,
+                  'tagline': userTagline,
+                  'profileUrl': userProfileImageUrl,
+                  'bio': userBio
+                }
+                  $event
+                )">
+                    Save Changes
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Right Side of Initial View Page - Image -->
+    <section class="right-side">
+        <div class="triangle-background"></div>
+        <div class="triangle-foreground"></div>
+    </section>
+</main>
