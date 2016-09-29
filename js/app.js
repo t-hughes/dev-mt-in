@@ -5,13 +5,7 @@ angular.module('socialInternApp', ['ui.router'])
 
         .state('home', {
             url: '/',
-            templateUrl: 'views/templates/home.html',
-            // controller: function($scope, $state) {
-            //     $scope.save = function() {
-            //         alert('saved!');
-            //         $state.go('landing');
-            //     };
-            // }
+            templateUrl: 'views/templates/home.html'
         })
 
         .state('landing', {
@@ -37,12 +31,6 @@ angular.module('socialInternApp', ['ui.router'])
         .state('update', {
             url: '/update',
             templateUrl: 'views/templates/update.html',
-            // controller: function($scope, $state) {
-            //     $scope.save = function() {
-            //         alert('saved!');
-            //         $state.go('landing');
-            //     };
-            // }
         });
 
     });

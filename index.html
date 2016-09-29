@@ -8,19 +8,19 @@
         <title>DevMountain Social</title>
 
         <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/sweetalert2/sweetalert2.min.css">
         <link rel="stylesheet" type="text/css" href="/styles/style.css">
     </head>
 
-    <body ng-controller="mainCtrl">
+    <body ng-controller="mainControl">
 
 
         <!-- Header -->
         <header>
             <nav class="nav-header">
                 <a ui-sref="friend-search"><img src="/images/Icons/Search.svg" class="search-icon"></a>
-                <a ui-sref="landing" class="devmt-branding">
-                    <h1 class="devmt-branding">DevMountain</h1>
-                </a>
+                    <h1 ui-sref="home" class="devmt-branding">DevMountain</h1>
+
                 <img src="/images/Icons/Ham.svg">
             </nav>
         </header>
@@ -38,12 +38,14 @@
         </footer>
 
 
+
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+        <script src="sweetalert2/sweetalert2.min.js"></script>
         <script src="js/app.js"></script>
-        <script src="js/controller.js"></script>
-        <script src="js/service.js"></script>
-        <script src="js/localstorageService.js"></script>
+        <script src="js/mainControl.js"></script>
+        <script src="js/mainService.js"></script>
+        <script src="js/userProfService.js"></script>
     </body>
 
 </html>

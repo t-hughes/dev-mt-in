@@ -14,31 +14,36 @@
         <div>
             <form class="form-home">
                 <input type="text"
-                ng-model="$root.name"
+                ng-model="userFullName"
                 placeholder="Full Name"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Full Name'">
 
                 <input type="text"
-                ng-model="$root.tagline"
+                ng-model="userTagline"
                 placeholder="Tagline"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Tagline'">
 
                 <input type="text"
-                ng-model="$root.imgUrl"
+                ng-model="userProfileImageUrl"
                 placeholder="Profile Image Url"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Profile Image Url'">
 
                 <textarea rows="15" cols="50"
-                ng-model="$root.bio"
+                ng-model="userBio"
                 placeholder="Bio"
                 onfocus="this.placeholder = ''"
                 onblur="this.placeholder = 'Bio'">
                 </textarea>
 
-                <button ng-click="save()" ng-disabled="!name || !tagline || !imgUrl || !bio">
+                <button ng-click="createUser(
+						    {'name': userFullName,
+                 'tagline': userTagline,
+							   'profileUrl': userProfileImageUrl,
+							   'bio': userBio
+						    }, $event)">
                     Save Changes
                 </button>
             </form>
