@@ -3,15 +3,19 @@
 <div class="main-container">
     <div class="profile-wrapper">
         <!-- Text Section -->
-        <h1 class="profile-firstname">{{results.name}}</h1>
+        <h1 class="profile-firstname">{{friendProfile.name}}
+        </h1>
         <h1 class="profile-lastname"></h1>
-        <h3 class="profile-tag">{{results.tagline}}</h3>
+        <h3 class="profile-tag">{{friendProfile.tagline}}
+        </h3>
         <div class="text-bio">
-            <p>{{results.bio}}</p>
+            <p>{{friendProfile.bio}}</p>
         </div>
 
 <!-- Add Friend Button -->
-        <button class="friend-profbutton">ADD FRIEND</button>
+        <button class="friend-profbutton" ng-click="addFriend(friendProfile)" ng-hide="currentlyFriends">ADD FRIEND</button>
+
+        <button class="friend-profbutton" ng-click="removeFriend" ng-show="currentlyFriends">REMOVE FRIEND</button>
     </div>
 
     <!-- Triangles on the right -->

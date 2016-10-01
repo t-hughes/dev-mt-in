@@ -32,5 +32,4 @@ angular.module('socialInternApp', ['ui.router'])
             url: '/update',
             templateUrl: 'views/templates/update.html',
         });
-
-    });
+  });
