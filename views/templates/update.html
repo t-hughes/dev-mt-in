@@ -3,11 +3,11 @@
 <div class="main-container">
     <div class="profile-wrapper">
         <!-- Text Section -->
-        <h1 class="profile-firstname profile-lastname">{{userProfile.name}}</h1>
+        <h1 class="profile-firstname profile-lastname">{{currentUser.name}}</h1>
         <!-- <h1 class="profile-lastname"></h1> -->
-        <h3 class="profile-tag">{{userProfile.tagline | uppercase}}</h3>
+        <h3 class="profile-tag">{{currentUser.tagline | uppercase}}</h3>
         <div class="text-bio">
-            <p>{{userProfile.bio}}</p>
+            <p>{{currentUser.bio}}</p>
         </div>
     </div>
 
@@ -16,21 +16,13 @@
 
         <div class="form-update">
             <div class="form-inputs">
-                <input ng-model="nameUpdate" type="text" name="name" value="" placeholder="Full Name">
-                <input ng-model="taglineUpdate" type="text" name="name" value="" placeholder="Tagline">
-                <input ng-model="profileUrlUpdate" type="text" name="name" value="" placeholder="Profile Img Url">
-                <textarea ng-model="bioUpdate" name="name" placeholder="Bio"></textarea>
+                <input ng-model="newUser.name" type="text" name="name" value="" placeholder="Full Name">
+                <input ng-model="newUser.tagline" type="text" name="name" value="" placeholder="Tagline">
+                <input ng-model="newUser.profileUrl" type="text" name="name" value="" placeholder="Profile Img Url">
+                <textarea ng-model="newUser.bio" name="name" placeholder="Bio"></textarea>
             </div>
         </div>
 
-        <button class="form-button" ng-click="updateProfile(
-						{
-								'name': nameUpdate
-							,	'tagline': taglineUpdate
-							, 'profileUrl': profileUrlUpdate
-							, 'bio': bioUpdate
-						}
-						, $event
-					)">Save Changes</button>
+        <button class="form-button" ng-click="createUser(newUser)">Save Changes</button>
     </div>
 </div>

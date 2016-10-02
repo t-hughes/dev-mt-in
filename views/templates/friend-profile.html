@@ -3,22 +3,28 @@
 <div class="main-container">
     <div class="profile-wrapper">
         <!-- Text Section -->
-        <h1 class="profile-firstname">{{friendProfile.name}}
+        <h1 class="profile-firstname">{{friend.name}}
         </h1>
         <h1 class="profile-lastname"></h1>
-        <h3 class="profile-tag">{{friendProfile.tagline}}
+        <h3 class="profile-tag">{{friend.tagline}}
         </h3>
         <div class="text-bio">
-            <p>{{friendProfile.bio}}</p>
+            <p>{{friend.bio}}</p>
         </div>
 
 <!-- Add Friend Button -->
-        <button class="friend-profbutton" ng-click="addFriend(friendProfile)" ng-hide="currentlyFriends">ADD FRIEND</button>
+        <button class="friend-profbutton"
+        ng-click="addFriend(friendProfile)"
+        ng-hide="currentlyFriends">ADD FRIEND</button>
 
-        <button class="friend-profbutton" ng-click="removeFriend" ng-show="currentlyFriends">REMOVE FRIEND</button>
+        <button class="friend-profbutton"
+        ng-click="removeFriend(friendProfile)"
+        ng-show="currentlyFriends">REMOVE FRIEND</button>
     </div>
 
     <!-- Triangles on the right -->
+
+    <!-- Need to add friend.profileUrl to the foreground triangle -->
     <section class="right-side">
         <div class="triangle-background"></div>
         <div class="triangle-foreground"></div>

@@ -222,14 +222,15 @@ footer .footer-link {
 
 .profile-tag {
     font-family: sans-serif;
-    font-size: 13px;
+    font-size: 18px;
     font-weight: 700;
     color: #272727;
+    text-transform: uppercase;
 }
 
 .text-bio {
     line-height: 14px;
-    font-size: 10.2px;
+    font-size: 16.2px;
 }
 
 .bio-paragraph {
@@ -405,7 +406,7 @@ footer .footer-link {
   opacity: 1;
 }
 
-.box a.view-proflink {
+.box div.view-profbox {
   display: inline-block;
   text-decoration: none;
   padding: 4px 5px;
@@ -418,13 +419,13 @@ footer .footer-link {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   font-weight: normal;
   font-size: 12px;
 }
 
-.box:hover a.view-proflink {
+.box:hover div.view-profbox {
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: scale(1);
@@ -432,9 +433,8 @@ footer .footer-link {
   transform: scale(1);
 }
 
-.box a.view-proflink:hover {
+.box div.view-profbox:hover {
   box-shadow: 0 0 6px #fff;
-  cursor: pointer;
 }
 
 .overlay-text {

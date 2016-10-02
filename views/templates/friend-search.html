@@ -3,11 +3,11 @@
 <div class="main-container">
     <div class="profile-wrapper">
         <!-- Text Section -->
-        <h1 class="profile-firstname">{{userProfile.name}}</h1>
+        <h1 class="profile-firstname">{{currentUser.name}}</h1>
         <h1 class="profile-lastname"></h1>
-        <h3 class="profile-tag">{{userProfile.tagline}}</h3>
+        <h3 class="profile-tag">{{currentUser.tagline}}</h3>
         <div class="text-bio">
-            <p>{{userProfile.bio}}</p>
+            <p>{{currentUser.bio}}</p>
         </div>
     </div>
 
@@ -18,15 +18,15 @@
         </nav>
 
         <div class="friends-list">
-
-        <div ng-repeat="results in userResults" class="picture-wrapper">
-            <img ng-src="{{results.profileUrl}}" class="friend-profilePic">
-            <div class="box">
-              <div class="overlay">
-                <p class="overlay-text">{{results.name}}</p>
-                <a class="view-proflink" ng-click="viewPotentialFriend(results, $event)">View Profile</a>
-              </div>
+            <div ng-repeat="friend in getFriends" ui-sref="friend-profile({id:friend.id})" class="picture-wrapper">
+                <img ng-src="{{friend.profileUrl}}" class="friend-profilePic">
+                <div class="box">
+                    <div class="overlay">
+                        <p class="overlay-text">{{friend.name}}</p>
+                        <div class="view-profbox" ng-click="viewPotentialFriend(friend)">View Profile</div>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
     </div>
+</div>
