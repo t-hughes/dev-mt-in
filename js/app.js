@@ -37,6 +37,5 @@ app.config(function($urlRouterProvider, $stateProvider) {
         .state('friends', {
             url: '/friends',
             templateUrl: '/views/templates/friends.html',
-
         });
   });

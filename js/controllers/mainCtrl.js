@@ -19,13 +19,13 @@ app.controller('mainCtrl', function($scope, $state, mainSvrc){
   $scope.userFriends = [];
   $scope.currentlyFriends = false;
 
-  $scope.addFriend = function(profileObj) {
-    mainSvrc.addFriendToUserFriends($scope.friendProfile );
+  $scope.addFriend = function(obj) {
+    $scope.userFriends = mainSvrc.addFriend($scope.friendProfile);
     $scope.currentlyFriends = true;
   };
 
-  $scope.removeFriend = function(profileObj) {
-    mainSvrc.removeFriendFromUserFriends
+  $scope.removeFriend = function(obj) {
+    mainSvrc.removeFriend
     ($scope.friendProfile);
     $scope.currentlyFriends = false;
   };

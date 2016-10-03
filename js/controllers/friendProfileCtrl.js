@@ -5,4 +5,5 @@ app.controller('friendProfileCtrl', function($scope, $state, mainSvrc) {
 
   $scope.friend = mainSvrc.getFriendById($scope.friendID);
 
+
 });

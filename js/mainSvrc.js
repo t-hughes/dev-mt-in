@@ -55,13 +55,14 @@ app.service('mainSvrc', function() {
   var friendProfile = {};
   var userFriends = [];
 
-  this.addFriendToUserFriends = function(profileObj) {
-      userFriends.push(profileObj);
+  this.addFriend = function(obj) {
+      userFriends.push(obj);
+      return userFriends;
   };
 
-  this.removeFriendFromUserFriends = function(profileObj) {
+  this.removeFriend = function(obj) {
     for( var i = userFriends.length - 1; i >= 0; i--) {
-      if (userFriends[i].name === profileObj.name) {
+      if (userFriends[i].id === obj.id) {
         userFriends.splice(i, 1);
       }
     }
