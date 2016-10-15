@@ -1,17 +1,33 @@
-app.service('mainSvrc', function() {
+app.service('mainSvrc', function($q) {
 
 //Stores users' data in local storage after clicking the save button on either form.
+
   this.createUser = function(user) {
     localStorage.setItem('profile', JSON.stringify(user));
     return user;
   };
+
+  this.checkForCurrentUser = function(){
+    var deferred = $q.defer();
+//check localstorage for user key
+  if(localStorage.getItem('profile')) {
+
+    deferred.resolve(localStorage.profile);
+  } else {
+    
+    deferred.reject();
+  }
+    return deferred.promise;
+  };
+
 
     var friends = [{
         'name': 'Elliot Alderson',
         'tagline': 'Please, tell me you are seeing this, too.',
         'profileUrl': 'http://www.usanetwork.com/sites/usanetwork/files/styles/629x720/public/2016/07/mrrobot_s2_cast_rami-malek2.jpg?itok=xdvYQrLy',
         'bio': 'I\'m only a vigilante hacker by night. By day, just a regular cybersecurity engineer. Employee number ER28-0652. I hack everyone.',
-        'id': 0
+        'id': 0,
+        // 'friends': []
     }, {
         'name': 'Gary Vaynerchuck',
         'tagline': 'Get Shit Done',
@@ -52,20 +68,18 @@ app.service('mainSvrc', function() {
     return friends[id];
   };
 
-  var friendProfile = {};
-  var userFriends = [];
+  this.userFriends = [];
 
-  this.addFriend = function(obj) {
-      userFriends.push(obj);
-      return userFriends;
-  };
+    this.addFriend = function(profileObj) {
+        this.userFriends.push(profileObj);
+    };
 
-  this.removeFriend = function(obj) {
-    for( var i = userFriends.length - 1; i >= 0; i--) {
-      if (userFriends[i].id === obj.id) {
-        userFriends.splice(i, 1);
+    this.removeFriend = function(profileObj) {
+      for( var i = this.userFriends.length - 1; i >= 0; i--) {
+        if (this.userFriends[i].name === profileObj.name) {
+          this.userFriends.splice(i, 1);
+        }
       }
-    }
-  };
+    };
 
 });
