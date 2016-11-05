@@ -24,23 +24,15 @@ app.config(function($urlRouterProvider, $stateProvider) {
             templateUrl: '/views/templates/friend-search.html',
             controller: 'friendSearchCtrl',
             resolve: {
-              checkUser: function(mainSvrc, $state) {
-                return mainSvrc.checkForCurrentUser()
-                .then(function(response){
-                  console.log(response);
-                  return response;
-                }, function(err){
-                swal('Oops!', 'Fill out the form!', 'error');
-                $state.go('home');
-              });
-              // if(localStorage.user) {
-              //   console.log(localStorage.user);
-              //   return true;
-              // }
-              // $state.go('home');
-              // swal('Oops!', 'Fill out the form!', 'error');
-              // return false;
-               }
+                checkUser: function(mainSvrc, $state) {
+                    return mainSvrc.checkForCurrentUser()
+                        .then(function(response) {
+                            return response;
+                        }, function(err) {
+                            swal('Oops!', 'Create a profile in order to find friends!', 'error');
+                            $state.go('home');
+                        });
+                }
             }
         })
         //#4 Upadte Profile Information - User can access this as soon as they submit the initial form on the Home page.
