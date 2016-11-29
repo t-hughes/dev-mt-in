@@ -13,16 +13,16 @@
 
     <div class="friend-profiles">
         <nav class="title-header">
-            <a ui-sref="friend-search"><img src="/images/Icons/Search.svg"></a>
-            <input class="search-friends" type="text" placeholder="Search For Friends" onfocus="this.placeholder=''" onblur="this.placeholder = 'Search For Friends'" ng-model="searchName">
+            <a ui-sref="friend-search"><img src="/images/Icons/Search.svg" ng-click="getPeople(searchInput)"></a>
+            <input class="search-friends" type="text" placeholder="Search For Friends" onfocus="this.placeholder=''" onblur="this.placeholder = 'Search For Friends'" ng-model="searchInput">
         </nav>
 
         <div class="friends-list">
-            <div ng-repeat="friend in getFriends" ui-sref="friend-profile({id:friend.id})" class="picture-wrapper">
-                <img ng-src="{{friend.profileUrl}}" class="friend-profilePic">
+            <div ng-repeat="person in people" ui-sref="friend-profile({id: person._id})" class="picture-wrapper">
+                <img ng-src="{{person.profileUrl}}" class="friend-profilePic">
                 <div class="box">
                     <div class="overlay">
-                        <p class="overlay-text">{{friend.name}}</p>
+                        <p class="overlay-text">{{person.name}}</p>
                         <div class="view-profbox">View Profile</div>
                     </div>
                 </div>

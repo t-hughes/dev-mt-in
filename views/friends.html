@@ -15,14 +15,17 @@
 
     <div class="friend-profiles">
         <nav class="title-header">
-            <select class="sort">ASCENDING</select>
+            <select>
+				<option value="">Ascending</option>
+				<option value="-">Descending</option>
+			</select>
             <h4>Friends</h4>
             <a ui-sref="friend-search"><img src="/images/Icons/Search.svg"></a>
         </nav>
 
         <div class="friends-list">
 
-            <div ng-repeat="friend in userFriends" class="picture-wrapper">
+            <div ng-repeat="friend in friends" class="picture-wrapper" ui-sref="friend-profile({id: friend._id })">
                 <img ng-src="{{friend.profileUrl}}" class="friend-profilePic">
                 <div class="box">
                     <div class="overlay">

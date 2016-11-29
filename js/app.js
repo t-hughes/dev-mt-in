@@ -10,18 +10,18 @@ app.config(function($urlRouterProvider, $stateProvider) {
     //#1 Initial Page
         .state('home', {
         url: '/',
-        templateUrl: 'views/templates/home.html'
+        templateUrl: 'views/home.html'
     })
 
     //#2 Landing Page(new users' profile page) - User is taken here when they submit the initial form on the Home page.
     .state('landing', {
             url: '/landing',
-            templateUrl: '/views/landing.html'
+            templateUrl: 'views/landing.html'
         })
         //#3 Search for Friends - User can access this page only after they submit the initial form on the Home Page.
         .state('friend-search', {
             url: '/friend-search',
-            templateUrl: '/views/friend-search.html',
+            templateUrl: 'views/friend-search.html',
             controller: 'friendSearchCtrl',
             resolve: {
                 checkUser: function(mainSvrc, $state) {
@@ -49,6 +49,7 @@ app.config(function($urlRouterProvider, $stateProvider) {
         //#6 New users' friends list. Only can access after they have added a friend.
         .state('friends', {
             url: '/friends',
-            templateUrl: '/views/friends.html',
+            templateUrl: 'views/friends.html',
+            controller: 'friendListCtrl'
         });
 });

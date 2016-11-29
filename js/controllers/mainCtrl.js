@@ -16,23 +16,4 @@ app.controller('mainCtrl', function($scope, $state, mainSvrc) {
         );
     };
 
-
-
-
-
-    $scope.friendProfile = {};
-    $scope.userFriends = mainSvrc.userFriends;
-    $scope.currentlyFriends = false;
-
-    $scope.addFriend = function(profileObj) {
-        mainSvrc.addFriend($scope.friendProfile);
-        $scope.userFriends = mainSvrc.userFriends;
-        $scope.currentlyFriends = true;
-    };
-
-    $scope.removeFriend = function(profileObj) {
-        mainSvrc.removeFriend($scope.friendProfile);
-        $scope.currentlyFriends = false;
-        $scope.userFriends = mainSvrc.userFriends;
-    };
 });
